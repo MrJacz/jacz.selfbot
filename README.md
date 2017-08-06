@@ -49,7 +49,7 @@ To start the selfbot, in the command prompt, run the following command:
 
 > If at any point it says "cannot find module X" just run `npm install X` and try again.
 
-For support join [〈J A C Z#9536〉](https://discord.gg/SttT9kg) and talk to me, J A C Z#9536!
+For support join [Jacz's Hub〉](https://discord.gg/SttT9kg) and talk to me, Jacz#9536!
 
 ## Making your own stuff
 
