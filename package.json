@@ -1,0 +1,30 @@
+{
+  "name": "jacz.selfbot",
+  "version": "1.0.0",
+  "description": "Selfbot using Klasa",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrJacz/jacz.selfbot.git"
+  },
+  "keywords": [
+    "Selfbot",
+    "Discord.js",
+    "Klasa"
+  ],
+  "author": "Jacz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrJacz/jacz.selfbot/issues"
+  },
+  "homepage": "https://github.com/MrJacz/jacz.selfbot#readme",
+  "dependencies": {
+    "common-tags": "^1.4.0",
+    "emoji-regex": "^6.5.1",
+    "hastebin-gen": "^1.2.0",
+    "klasa": "^0.2.1"
+  }
+}
