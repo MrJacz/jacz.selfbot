@@ -56,6 +56,8 @@ typings/
 
 # dotenv environment variables file
 .env
+#config cause mad
+config.json
 
 # Klasa
 bwd
