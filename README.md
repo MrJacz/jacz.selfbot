@@ -27,9 +27,12 @@ Once finished:
 
 ```json
 {
-    "token" : "",
-    "webhookid" : "",
-    "webhooktoken" : ""
+    "token" : "You're token",
+    "prefix" : "your prefix",
+    "id": "your id",
+    "webhookid": "webhook id for mentions",
+    "webhooktoken": "webhook token for mentions",
+    "google_api" : "youtube statistics api key"
 }
 ```
 
@@ -39,6 +42,7 @@ Once finished:
 2. This brings up the **Developer Tools**. Go to the **Application** tab
 3. On the left, expand **Local Storage**, then click on the discordapp.com entry (it should be the only one).
 4. Locate the entry called `token`, and copy it.
+5. Now paste it into your config.json file.
 
 > **KEEP YOUR TOKEN SECRET, AND NEVER SHARE IT WITH ANYONE**
 
@@ -60,8 +64,4 @@ adding your own commands, events, etc.
 
 If relevant, updating to a new version here will indicate what you need to do.
 
-<<<<<<< HEAD
 ## The end
-=======
-## The end
->>>>>>> f08b080be2ac795449a65eae2b2fd43d23290bba
