@@ -60,4 +60,8 @@ adding your own commands, events, etc.
 
 If relevant, updating to a new version here will indicate what you need to do.
 
+<<<<<<< HEAD
 ## The end
+=======
+## The end
+>>>>>>> f08b080be2ac795449a65eae2b2fd43d23290bba
