@@ -1,1 +1,0 @@
-{"prefix":{"type":"String","default":"s/","array":false,"sql":"TEXT NOT NULL DEFAULT 's/'"},"modRole":{"type":"Role","default":null,"array":false,"sql":"TEXT"},"adminRole":{"type":"Role","default":null,"array":false,"sql":"TEXT"},"disabledCommands":{"type":"Command","default":[],"array":true,"sql":"TEXT DEFAULT '[]'"}}

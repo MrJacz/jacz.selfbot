@@ -1,5 +1,8 @@
 {
-    "token" : "",
-    "webhookid" : "",
-    "webhooktoken" : ""
+    "token" : "You're token",
+    "prefix" : "your prefix",
+    "id": "your id",
+    "webhookid": "webhook id for mentions",
+    "webhooktoken": "webhook token for mentions",
+    "google_api" : "youtube statistics api key"
 }

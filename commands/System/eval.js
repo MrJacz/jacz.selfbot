@@ -8,10 +8,17 @@ const hastebin = require('hastebin-gen');
 module.exports = class extends Command {
 	constructor(...args) {
 		super(...args, {
-			aliases: ['ev'],
-			permLevel: 10,
-			description: 'Evaluates arbitrary Javascript. Reserved for bot owner.',
-			usage: '<expression:str>'
+			name: 'eval',
+			enabled: true,
+			runIn: ['text', 'dm', 'group'],
+			cooldown: 2,
+			aliases: ["ev"],
+			permLevel: 0,
+			botPerms: ["SEND_MESSAGES"],
+			requiredSettings: [],
+			description: 'Evaluates arbitrary Javascript.',
+			usage: '<expression:str>',
+			extendedHelp: 'No extended help available.'
 		});
 	}
 
@@ -23,19 +30,17 @@ module.exports = class extends Command {
 		if (typeof evaled !== 'string') evaled = inspect(evaled, {
 			depth: 0
 		});
+    const emoji = ":regional_indicator_e: :regional_indicator_v: :regional_indicator_a: :regional_indicator_l:";
 		const evaledcode = this.client.methods.util.clean(evaled);
 		if (evaled.length > 1999) {
-			msg.delete()
 			hastebin(evaledcode, "js").then(r => {
-
-				msg.send(`\`Input:\`\n${this.client.methods.util.codeBlock('js', code)}\n\`Output:\` **Evaled code was over 2000 letters Here yo go **${r}`).then(m => m.delete({ timeout: 10000 }))
+        msg.send(`\`Input:\`\n${this.client.methods.util.codeBlock('js', code)}\n\`Output:\` **Evaled code was over 2000 letters Here yo go **${r}`);
 			}).catch(console.error);
 		} else {
-			msg.delete()
-			msg.send(`\`Input:\`\n${this.client.methods.util.codeBlock('js', code)}\n \`Output:\` \`\`\`${evaledcode}\`\`\``).then(m => m.delete({ timeout: 10000})).catch(console.log);
+      msg.send(`\`Input:\`\n${this.client.methods.util.codeBlock('js', code)}\n \`Output:\` \`\`\`js\n${evaledcode}\`\`\``);
 		}
 		} catch(err) {
-			msg.send(`**ERROR**${this.client.methods.util.codeBlock('js', this.client.methods.util.clean(err))}`).then(m => m.delete({ timeout: 10000 })).catch(console.log);
+      msg.send(`\`Input:\`\n${this.client.methods.util.codeBlock('js', code)}\`ERROR\`\n${this.client.methods.util.codeBlock('js', this.client.methods.util.clean(err))}`);
 			if (err.stack) this.client.emit('error', err.stack);
 		}
 

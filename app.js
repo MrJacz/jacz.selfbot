@@ -1,15 +1,22 @@
-const klasa = require("klasa");
+const { Client } = require("klasa");
 const auth = require("./config.json");
-const client = new klasa.Client({
+
+class JaczClient extends Client {
+    constructor(options) {
+        super(options);
+}
+}
+
+const client = new JaczClient({
     clientOptions: {
         fetchAllMembers: true,
     },
-    prefix: "!!",
+    prefix: auth.prefix,
     cmdPrompt: true,
     cmdEditing: true,
-    ownerID: client.user.id,
-    ignoreSelf: false
-});
-client.config = require("./config.json");
-
+    ownerID: auth.id,
+    ignoreSelf: false,
+    ignoreBots: true
+})
+client.config = Object.assign(client.config, require("./config.json"));
 client.login(auth.token);
