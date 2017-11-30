@@ -1,5 +1,7 @@
 # jacz.selfbot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MrJacz/jacz.selfbot.svg)](https://greenkeeper.io/)
+
 
 I AM NOT RESPONSIBLE AND CANNOT BE HELD LIABLE IF YOU MESS UP WITH SELFBOTS. THIS INCLUDES BUT IS NOT LIMITED TO LOSING PRIVILEGES, GETTING KICKED OR BANNED FROM SERVERS, OR BEING BANNED.
 
